@@ -13,6 +13,7 @@ export * from './lib/entities/tots_page';
  * Services
  */
 export * from './lib/services/tots_templates.service';
+export * from './lib/services/tots_component.service';
 
 /**
  * Interceptors
