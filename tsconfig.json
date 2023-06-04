@@ -5,6 +5,9 @@
     "paths": {
       "@tots/templates-core": [
         "dist/tots/templates-core"
+      ],
+      "@tots/templates-editor": [
+        "dist/tots/templates-editor"
       ]
     },
     "baseUrl": "./",

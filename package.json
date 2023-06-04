@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "build2": "ng build --project=@tots/templates-core --configuration production && cd dist/tots/templates-core/ && npm publish --access public",
+    "build3": "ng build --project=@tots/templates-editor --configuration production && cd dist/tots/templates-editor/ && npm publish --access public",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
