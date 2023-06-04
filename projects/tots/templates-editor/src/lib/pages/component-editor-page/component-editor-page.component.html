@@ -1,1 +1,23 @@
-<p>component-editor-page works!</p>
+<h1>Editor component:</h1>
+<div class="container">
+    <mat-tab-group>
+        <mat-tab label="HTML">
+            <div class="container">
+                <ngx-monaco-editor style="height: 100%" [options]="htmlEditor" [(ngModel)]="component.html"></ngx-monaco-editor>
+            </div>
+            
+        </mat-tab>
+        <mat-tab label="CSS">
+            <div class="container">
+                <ngx-monaco-editor style="height: 100%" [options]="cssEditor"></ngx-monaco-editor>    
+            </div>
+            
+        </mat-tab>
+        <mat-tab label="JS">
+            <div class="container">
+                <ngx-monaco-editor style="height: 100%" [options]="jsEditor"></ngx-monaco-editor>    
+            </div>
+            
+        </mat-tab>
+      </mat-tab-group>
+</div>
