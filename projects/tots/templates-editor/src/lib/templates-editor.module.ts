@@ -11,8 +11,13 @@ import { MatButtonModule } from "@angular/material/button";
 /** Others libraries */
 import { MonacoEditorModule } from '@tots/ngx-monaco-editor-v2';
 
+/** Tots Libraries */
+import { TotsTemplatesCoreModule } from '@tots/templates-core';
+
 /** Pages */
 import { TotsComponentEditorPageComponent } from './pages/component-editor-page/component-editor-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -31,7 +36,10 @@ import { TotsComponentEditorPageComponent } from './pages/component-editor-page/
     MatButtonModule,
 
     /** Others libraries */
-    MonacoEditorModule.forRoot({})
+    MonacoEditorModule.forRoot({}),
+
+    /** Tots Libraries */
+    TotsTemplatesCoreModule
   ],
   exports: [
     /** Pages */
