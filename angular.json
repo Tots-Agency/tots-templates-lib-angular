@@ -155,6 +155,7 @@
             "tsConfig": "projects/example/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              { "glob": "**/*", "input": "node_modules/monaco-editor", "output": "/assets/monaco/" },
               "projects/example/src/favicon.ico",
               "projects/example/src/assets"
             ],

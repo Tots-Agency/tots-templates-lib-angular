@@ -4,7 +4,9 @@
   "peerDependencies": {
     "@angular/common": "^15.1.0",
     "@angular/core": "^15.1.0",
-    "@tots/templates-core": "^15.0.0"
+    "@tots/templates-core": "^15.0.0",
+    "@tots/ngx-monaco-editor-v2": "^15.0.0",
+    "monaco-editor": "^0.34.1"
   },
   "dependencies": {
     "tslib": "^2.3.0"
