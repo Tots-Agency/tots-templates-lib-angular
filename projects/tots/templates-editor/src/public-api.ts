@@ -3,6 +3,11 @@
  */
 
 /**
+ * Entities
+ */
+export * from './lib/entities/tots_component_editor_page_config';
+
+/**
  * Pages
  */
 export * from './lib/pages/component-editor-page/component-editor-page.component';

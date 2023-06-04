@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TotsComponent } from '@tots/templates-core';
 
 @Component({
@@ -14,9 +15,15 @@ export class TotsComponentEditorPageComponent implements OnInit {
 
   component = new TotsComponent();
 
-  constructor() { }
+  constructor(
+    protected router: Router,
+  ) { }
 
   ngOnInit(): void {
     this.component.html = '<h1>Titulo del Blog</h1><div class="posts">@foreach ($posts as $post)<x-post-card></x-post-card>@endforeach</div>';
+  }
+
+  onClickBack() {
+    this.router.navigateByUrl('/templates');
   }
 }
