@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TotsTemplatesEditorModule } from 'projects/tots/templates-editor/src/public-api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TotsTemplatesEditorModule } from 'projects/tots/templates-editor/src/pu
     BrowserModule,
     AppRoutingModule,
 
-    TotsTemplatesEditorModule
+    TotsTemplatesEditorModule,
+     BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
