@@ -9,6 +9,8 @@ import { TotsTemplate } from '../entities/tots_template';
 })
 export class TotsTemplatesService extends TotsBaseHttpService<TotsTemplate> {
 
+  templateSelectedId?: number;
+
   constructor(
     @Inject(TOTS_CORE_PROVIDER) protected override config: TotsCoreConfig,
     protected override http: HttpClient,
@@ -17,4 +19,7 @@ export class TotsTemplatesService extends TotsBaseHttpService<TotsTemplate> {
     this.basePathUrl = 'templates';
   }
 
+  setTemplateCurrentId(id: number) {
+    this.templateSelectedId = id;
+  }
 }
