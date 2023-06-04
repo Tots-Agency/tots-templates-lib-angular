@@ -21,6 +21,7 @@ export class TotsComponentEditorPageComponent implements OnInit {
   component = new TotsComponent();
 
   isLoading = false;
+  isSending = false;
 
   constructor(
     protected route: ActivatedRoute,
@@ -31,6 +32,29 @@ export class TotsComponentEditorPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadConfig();
+  }
+
+  onCreate() {
+    this.isSending = true;
+    this.componentService.create(this.component)
+    .pipe(tap(component => this.component.id = component.id))
+    .pipe(tap(() => this.isSending = false))
+    .subscribe();
+  }
+
+  onUpdate() {
+    this.isSending = true;
+    this.componentService.update(this.component)
+    .pipe(tap(() => this.isSending = false))
+    .subscribe();
+  }
+
+  onClickSave() {
+    if(this.component.id == undefined || this.component.id <= 0){
+      this.onCreate();
+    } else {
+      this.onUpdate();
+    }
   }
 
   onClickBack() {
@@ -53,6 +77,7 @@ export class TotsComponentEditorPageComponent implements OnInit {
     this.templateService.setTemplateCurrentId(params['template_id']);
 
     if(params['id'] == undefined){
+      this.component.title = 'New Component';
       return;
     }
 
